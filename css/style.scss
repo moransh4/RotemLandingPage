@@ -5,28 +5,26 @@
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 :root {
-  --header-outer-height: 110px;
-  --header-inner-height: 70px;
-  --header-height-difference: calc(
-    var(--header-outer-height) - var(--header-inner-height)
-  );
-  --header-bg: #fffbf2;
-  --background-color: #f2f5f7;
+    --header-outer-height: 110px;
+    --header-inner-height: 70px;
+    --header-height-difference: calc(var(--header-outer-height) - var(--header-inner-height));
+    --header-bg: #fffbf2;
+    --background-color: #f2f5f7;
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
-  background-color:   --background-color;
-  line-height: 1.5;
-  min-height: 300vh;
-  position: relative;
-  scroll-behavior: smooth;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+    font-family: "DM Sans", sans-serif;
+    background-color: --background-color;
+    line-height: 1.5;
+    min-height: 300vh;
+    position: relative;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 * {
@@ -112,7 +110,7 @@ body {
     #home {
         width: 100%;
         //padding-top: 10px;
-        height: calc(100vh - $navbarHight);
+        height: calc(100vh - 110px);
         text-align: center;
         display: flex;
         align-items: center;
@@ -138,6 +136,10 @@ body {
                 height: 100%;
                 color: white;
                 font-weight: bold;
+
+                @media screen and (max-width: 700px) {
+                }
+            
 
                 h1 {
                     font-size: 60px;
@@ -174,10 +176,7 @@ body {
 
         .img-wrapper {
             flex: 1;
-            //width: 100%;
-            height: 100%;
-            background: #000 center url("../images/intro-background-left.jpg") no-repeat;
-            min-height: 500px;
+            background-image:  url("../images/intro-background-left.jpg") ;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -198,7 +197,7 @@ body {
             margin-left: 5px;
 
             @media only screen and (max-width: 600px) {
-                font-size: 20px;
+                font-size: 18px;
             }
 
             @media only screen and (max-width: 400px) {
@@ -226,45 +225,35 @@ body {
                 height: 500px;
                 background-color: pink;
                 flex: 1;
+                min-height: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                @media only screen and (max-width: 600px) {
+                    height: auto;
+                    min-height: auto;
+                }
+
 
                 &.workshops1 {
-                    background: #000 center url("../images/work7.jpg") no-repeat;
-                    min-height: 500px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    background-image: url("../images/work7.jpg") ;
                 }
 
                 &.workshops2 {
-                    background: #000 center url("../images/work8.jpg") no-repeat;
-                    min-height: 500px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    background-image: url("../images/work8.jpg");
                 }
 
                 &.workshops3 {
-                    background: #000 center url("../images/work2.jpg") no-repeat;
-                    min-height: 500px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    background-image: url("../images/work2.jpg") ;
                 }
 
                 &.workshops4 {
-                    background: #000 center url("../images/work12.jpg") no-repeat;
-                    min-height: 500px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    background-image:  url("../images/work12.jpg");
                 }
 
                 &.workshops5 {
-                    background: #000 center url("../images/work11.jpg") no-repeat;
-                    min-height: 500px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    background-image: url("../images/work11.jpg");
                 }
             }
 
@@ -284,7 +273,7 @@ body {
                 margin-left: 5px;
 
                 @media only screen and (max-width: 600px) {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
 
                 @media only screen and (max-width: 400px) {
@@ -363,145 +352,141 @@ body {
 // @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 
-.responsive-wrapper {
 
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 /* Sticky header */
 .header-outer {
-  /* Make it stick */
-  height: var(--header-outer-height);
-  position: sticky;
-  top: calc(
-    var(--header-height-difference) * -1
-  ); /* Multiply by -1 to get a negative value */
-  display: flex;
-  align-items: center;
+    /* Make it stick */
+    height: var(--header-outer-height);
+    position: sticky;
+    top: calc(var(--header-height-difference) * -1);
+    /* Multiply by -1 to get a negative value */
+    display: flex;
+    align-items: center;
 
-  /* Other */
-  background-color: var(--header-bg);
-  box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.1);
-  
+    /* Other */
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+
+    .header-inner {
+        /* Make it stick */
+        height: var(--header-inner-height);
+        position: sticky;
+        top: 0;
+
+        /* Other */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+
+        &.responsive-wrapper {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .header-logo {
+            width: 160px;
+
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .header-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+
+            @media (max-width: 510px) {
+
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s;
+            }
+
+            a,
+            button {
+                font-size: 1.125rem;
+                color: inherit;
+                margin-left: 1.75rem;
+                position: relative;
+                font-weight: 500;
+
+                &:hover::after {
+                    transform: scalex(1);
+                }
+
+                &::after {
+                    transition: 0.25s ease;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: currentcolor;
+                    transform: scalex(0);
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                }
+            }
+
+            a {
+                font-size: 1.125rem;
+                color: inherit;
+                text-decoration: none;
+                @media (max-width: 510px) {
+                    display: none;
+                }
+
+            }
+        }
+    }
 }
 
-.header-inner {
-  /* Make it stick */
-  height: var(--header-inner-height);
-  position: sticky;
-  top: 0;
 
-  /* Other */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-/* Styling of other elements */
-
-.header-logo{
-    width: 160px;
-  }
-
-.header-logo img {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.header-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-}
-
-.header-navigation a,
-.header-navigation button {
-  font-size: 1.125rem;
-  color: inherit;
-  margin-left: 1.75rem;
-  position: relative;
-  font-weight: 500;
-}
-
-.header-navigation a {
-  display: none;
-  font-size: 1.125rem;
-  color: inherit;
-  text-decoration: none;
-}
-
-.header-navigation button {
-  border: 0;
-  background-color: transparent;
-  padding: 0;
-}
-
-.header-navigation a:hover:after,
-.header-navigation button:hover:after {
-  transform: scalex(1);
-}
-
-.header-navigation a:after,
-.header-navigation button:after {
-  transition: 0.25s ease;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: currentcolor;
-  transform: scalex(0);
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-}
 
 .main {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 
 .widget {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
-  background-color: #fff;
-  padding: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  font-size: 1.125rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
 }
 
-.widget > * + * {
-  margin-top: 1.25em;
+.widget>*+* {
+    margin-top: 1.25em;
 }
 
 .widget h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.25;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
 .widget code {
-  display: inline-block;
-  padding: 0.125em 0.25em;
-  border-radius: 2px;
-  background-color: #bee5d3;
+    display: inline-block;
+    padding: 0.125em 0.25em;
+    border-radius: 2px;
+    background-color: #bee5d3;
 }
 
 .widget strong {
-  font-weight: 700;
-}
-
-@media (min-width: 800px) {
-  .header-navigation a {
-    display: inline-block;
-  }
-
-  .header-navigation button {
-    display: none;
-  }
+    font-weight: 700;
 }
