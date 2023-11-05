@@ -280,8 +280,16 @@ body {
                     font-size: 15px;
                 }
 
+                h3{
+                    margin: 0px;
+                }
+
+                p{
+                    margin-bottom: 0;
+                }
+
                 ul {
-                    margin: 0;
+                    margin: 14px 0 0 0 ;
 
                     @media screen and (max-width: 950px) {
                         padding-right: 10px;
@@ -305,7 +313,7 @@ body {
         .media {
             width: 100%;
             height: 50%;
-            background-color: #4c3839;
+            background-color: #fffbf2;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -328,13 +336,14 @@ body {
             direction: rtl;
             width: 100%;
             height: 50%;
-            background-color: #efddcb;
+            background-color: #fffbf2;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             font-weight: bold;
+            font-size: 20px;
 
             span {
                 margin: 0 20px;
