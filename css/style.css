@@ -110,7 +110,7 @@ body .intro .text {
 }
 @media only screen and (max-width: 400px) {
   body .intro .text {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 body .workshops-wrapper {
@@ -178,7 +178,7 @@ body .workshops-wrapper .workshops .text {
 }
 @media only screen and (max-width: 400px) {
   body .workshops-wrapper .workshops .text {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 body .workshops-wrapper .workshops .text h3 {
