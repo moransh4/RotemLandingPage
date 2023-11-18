@@ -32,6 +32,14 @@ body {
 
 body {
 
+    .workshops-wrapper{
+        .workshops{
+            // padding-right: 8px;
+            // padding-left: 8px;
+        }
+    }
+
+
 
     // header {
     //     /* animation magic */
@@ -152,8 +160,9 @@ body {
 
                 h2 {
 
-                    font-size: 50px;
+                    font-size: 32px;
                     margin: 0;
+                    direction: rtl;
 
                     @media screen and (max-width: 700px) {
                         font-size: 30px;
@@ -172,10 +181,12 @@ body {
         text-align: right;
         justify-content: space-between;
         margin-top: 5px;
+        // padding-right: 8px;
+        // padding-left: 8px;
 
         .img-wrapper {
             flex: 1;
-            background-image:  url("../images/intro-background-left.jpg") ;
+            background-image:  url("../images/work13.jpg") ;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -237,7 +248,7 @@ body {
 
 
                 &.workshops1 {
-                    background-image: url("../images/work7.jpg") ;
+                    background-image: url("../images/work18.jpg") ;
                 }
 
                 &.workshops2 {
@@ -245,15 +256,15 @@ body {
                 }
 
                 &.workshops3 {
-                    background-image: url("../images/work2.jpg") ;
+                    background-image: url("../images/work17.jpg") ;
                 }
 
                 &.workshops4 {
-                    background-image:  url("../images/work12.jpg");
+                    background-image:  url("../images/work16.jpg");
                 }
 
                 &.workshops5 {
-                    background-image: url("../images/work11.jpg");
+                    background-image: url("../images/work15.jpg");
                 }
             }
 
@@ -499,3 +510,26 @@ body {
 .widget strong {
     font-weight: 700;
 }
+
+
+///////////////////////////////////////////////////
+.swiper {
+    width: 70%;
+    --swiper-navigation-color: #000000;
+    --swiper-pagination-color: #000000;
+ }
+ 
+ 
+ .swiper-slide img {
+    width: auto;
+    height: auto;
+    max-width: 85%;
+    max-height: 100%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
