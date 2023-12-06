@@ -203,6 +203,7 @@ body .workshops-wrapper .workshops .text ul li::marker {
 body #contact {
   width: 100%;
   margin: 25px 0;
+  background-color: white;
 }
 body #contact .media {
   width: 100%;
@@ -211,6 +212,7 @@ body #contact .media {
   align-items: flex-end;
   justify-content: center;
   flex-direction: row;
+  background-color: white;
 }
 body #contact .media div {
   margin: 0 15px;
